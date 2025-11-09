@@ -20,7 +20,8 @@
                 '+' => A + B,
                 '-' => A - B,
                 '*' => A * B,
-                '/' => B != 0 ? A / B : throw new DivideByZeroException("Division by zero is not allowed.")
+                '/' => B != 0 ? A / B : throw new DivideByZeroException("Division by zero is not allowed."),
+                _   => throw new InvalidOperationException("Invalid arithmetic operation.")
             };
         }
     }
